@@ -1,7 +1,14 @@
 import React from "react";
 
 const SinglePage = () => {
-  return <div>SinglePage</div>;
+  return (
+    <div className="">
+      {/* IMG */}
+      <div className=""></div>
+      {/* TEXT */}
+      <div className=""></div>
+    </div>
+  );
 };
 
 export default SinglePage;
