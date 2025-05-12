@@ -1,3 +1,5 @@
+"use client";
+
 // import Filter from "@/components/Filter";
 // import ProductList from "@/components/ProductList";
 // import Skeleton from "@/components/Skeleton";
@@ -23,7 +25,7 @@ const ListPage = () => {
             Grab up to 50% off on
             <br /> Selected Products
           </h1>
-          <button className="rounded-3xl bg-lama text-white w-max py-3 px-5 text-sm">
+          <button className="rounded-3xl bg-jerat text-white w-max py-3 px-5 text-sm">
             Buy Now
           </button>
         </div>
