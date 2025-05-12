@@ -1,13 +1,16 @@
 "use client";
 
-// import ProductList from "@/components/ProductList";
-// import Skeleton from "@/components/Skeleton";
-// import { wixClientServer } from "@/lib/wixClientServer";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 import Filter from "../components/Filter";
+// import ProductList from "../components/ProductList";
+// import Skeleton from "../components/Skeleton";
 
 const ListPage = () => {
+  const searchParams = useSearchParams();
+  const cat = searchParams.get("cat") || "all-products";
+
   return (
     <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
       {/* CAMPAIGN */}
@@ -17,7 +20,7 @@ const ListPage = () => {
             Grab up to 50% off on
             <br /> Selected Products
           </h1>
-          <button className="rounded-3xl bg-jerat text-white w-max py-3 px-5 text-sm">
+          <button className="rounded-3xl bg-lama text-white w-max py-3 px-5 text-sm">
             Buy Now
           </button>
         </div>
@@ -25,9 +28,15 @@ const ListPage = () => {
           <Image src="/woman.png" alt="" fill className="object-contain" />
         </div>
       </div>
+
       {/* FILTER */}
       <Filter />
+
       {/* PRODUCTS */}
+      <h1 className="mt-12 text-xl font-semibold">{cat} For You!</h1>
+      {/* <Suspense fallback={<Skeleton />}>
+        <ProductList categorySlug={cat} />
+      </Suspense> */}
     </div>
   );
 };
